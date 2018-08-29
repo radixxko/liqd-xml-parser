@@ -9,8 +9,8 @@
 	/[^]*?(?=]]>)/
 
 :text
-	/[^<>]+/
-	/<!\[CDATA\[\s*([\s\S]*?)\s*\]\]>/1
+	$value:/[^<>]+/
+	$cdata:/<!\[CDATA\[\s*([\s\S]*?)\s*\]\]>/1
 
 :tag
 	$tag:/<([a-zA-Z][a-z0-9]*)/1 ?...$attributes:tag_attribute > $:text </ $tag >
