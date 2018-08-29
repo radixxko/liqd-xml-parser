@@ -1,6 +1,6 @@
 {
   "name": "liqd-xml-parser",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Fast XML parser",
   "main": "lib/xml_parser.js",
   "files": [
