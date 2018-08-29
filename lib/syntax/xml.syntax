@@ -1,0 +1,21 @@
+:string
+	/"([^"]*)"/1
+	/'([^']*)'/1
+
+:tag_attribute
+	$attribute:/[a-zA-Z_][a-zA-Z_0-9]*/ = $value:string
+
+:cdata
+	/[^]*?(?=]]>)/
+
+:text
+	/[^<>]+/
+	/<!\[CDATA\[\s*([\s\S]*?)\s*\]\]>/1
+
+:tag
+	$tag:/<([a-zA-Z][a-z0-9]*)/1 ?...$attributes:tag_attribute > $:text </ $tag >
+	$tag:/<([a-zA-Z][a-z0-9]*)/1 ?...$attributes:tag_attribute > ?...$nodes:tag </ $tag >
+	$tag:/<([a-zA-Z][a-z0-9]*)/1 ?...$attributes:tag_attribute />
+
+:main
+	...$nodes:tag

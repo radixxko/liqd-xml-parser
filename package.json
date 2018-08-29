@@ -1,0 +1,26 @@
+{
+  "name": "liqd-xml-parser",
+  "version": "1.0.1",
+  "description": "Fast XML parser",
+  "main": "lib/xml_parser.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/radixxko/liqd-xml-parser.git"
+  },
+  "keywords": [
+    "xml",
+    "parser",
+    "liqd"
+  ],
+  "author": "radixxko",
+  "license": "MIT",
+  "dependencies": {
+    "liqd-parser": "^1.2.4"
+  }
+}
