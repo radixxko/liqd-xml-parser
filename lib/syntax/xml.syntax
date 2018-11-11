@@ -13,9 +13,9 @@
 	$cdata:/<!\[CDATA\[\s*([\s\S]*?)\s*\]\]>/1
 
 :tag
-	$tag:/<([a-zA-Z][a-zA-Z0-9_]*)/1 ?...$attributes:tag_attribute > $:text </ $tag >
-	$tag:/<([a-zA-Z][a-zA-Z0-9_]*)/1 ?...$attributes:tag_attribute > ?...$nodes:tag </ $tag >
-	$tag:/<([a-zA-Z][a-zA-Z0-9_]*)/1 ?...$attributes:tag_attribute />
+	$tag:/<([a-zA-Z][a-zA-Z0-9_:]*)/1 ?...$attributes:tag_attribute > $:text </ $tag >
+	$tag:/<([a-zA-Z][a-zA-Z0-9_:]*)/1 ?...$attributes:tag_attribute > ?...$nodes:tag </ $tag >
+	$tag:/<([a-zA-Z][a-zA-Z0-9_:]*)/1 ?...$attributes:tag_attribute />
 	$prolog:/<\?([a-zA-Z][a-zA-Z0-9_]*)/1 ?...$attributes:tag_attribute /\?>/
 
 :main
